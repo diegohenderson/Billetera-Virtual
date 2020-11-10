@@ -1,39 +1,52 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-
+using Billetera.Models;
+using Billetera.Web.Models;
+using System.Web.Routing;
 namespace Billetera.Web.Controllers
 {
+    
+    [RoutePrefix("api/Cliente")]
     public class ClienteController : ApiController
     {
-        // GET: api/Clientes
-        public IEnumerable<string> Get()
+        // GET: api/Cliente
+        public IEnumerable<Cliente> Get()
         {
-            return new string[] { "value1", "value2" };
+            GestorCliente gCliente = new GestorCliente();
+            return gCliente.obtenerClientes();
         }
 
-        // GET: api/Clientes/5
-        public string Get(int id)
+        // GET: api/Cliente/"número de id"
+        public Cliente Get(int id)
         {
-            return "value";
+            GestorCliente gCliente = new GestorCliente();
+            return gCliente.obtenerPorId(id);
         }
 
-        // POST: api/Clientes
-        public void Post([FromBody]string value)
+        // POST: api/Cliente
+        public void Post([FromBody] Cliente nuevo)
         {
+            GestorCliente gCliente = new GestorCliente();
+            //return gCliente.nuevoCliente(nuevo);
         }
 
-        // PUT: api/Clientes/5
-        public void Put(int id, [FromBody]string value)
+        // PUT: api/Cliente/"número de id"
+        public void Put(int id, [FromBody] Cliente cli)
         {
+            GestorCliente gCliente = new GestorCliente();
+            //return gCliente.modificarCliente(id);
         }
 
-        // DELETE: api/Clientes/5
+        // DELETE: api/Cliente/"número de id"
         public void Delete(int id)
         {
+            GestorCliente gCliente = new GestorCliente();
+            //return gCliente.eliminarCliente(id);
         }
     }
 }
