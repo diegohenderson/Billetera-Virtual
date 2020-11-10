@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Billetera.Web.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -13,7 +14,9 @@ namespace Billetera.Web
 
             // Rutas de API web
             config.MapHttpAttributeRoutes();
-
+            //tokenvalid
+            config.MessageHandlers.Add(new TokenValidationHandler());
+            //
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",

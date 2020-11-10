@@ -10,7 +10,7 @@ using Billetera.Web.Models;
 using System.Web.Routing;
 namespace Billetera.Web.Controllers
 {
-    
+    [Authorize]
     [RoutePrefix("api/Cliente")]
     public class ClienteController : ApiController
     {
