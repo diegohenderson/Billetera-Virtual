@@ -1,0 +1,14 @@
+﻿@using Billetera.Web.Models
+@model Ejemplo
+@{
+    ViewBag.Title = "agregar persona";
+}
+<h2> agregar persona</h2>
+@using (Html.BeginForm())
+{
+    <label>nombre</label>
+    @Html.TextBoxFor(p=> p.Nombre)
+    <label>apellido </label>
+    @Html.TextBoxFor(p=> p.Apellido)
+    <input type="submit" value="agregar" />
+}

@@ -1,0 +1,20 @@
+﻿@using Billetera.Web.Models;
+@model List<Ejemplo>
+@{
+    ViewBag.Title = " lista de personas";
+
+}
+
+<h2>lista de personas</h2>
+<table>
+    @foreach (Ejemplo p in Model)
+    {
+        <tr>
+            <td>@p.Nombre</td>
+            <td>@p.Apellido</td>}
+            <td> <a href="/Ejemplo/Eliminar?id=@p.Id">Eliminar</a></td>
+            <td><a href="/Ejemplo/Modificar?id=@p.Id">Modificar</a></td>
+        </tr>
+    }
+</table>
+<a href="/Ejemplo/Agregar"> agregar una nueva persona</a>
