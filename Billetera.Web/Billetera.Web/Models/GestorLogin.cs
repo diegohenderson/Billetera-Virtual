@@ -16,9 +16,9 @@ namespace Billetera.Web.Models
             using(SqlConnection conn = new SqlConnection(strConn))
             {
                 conn.Open();
-                SqlCommand comm = new SqlCommand("obtener_Login", conn);
+                SqlCommand comm = new SqlCommand("obtenerLogin", conn);
                 comm.CommandType = System.Data.CommandType.StoredProcedure;
-                comm.Parameters.Add(new SqlParameter("@nombre_usuario", ploginRequest.Username));
+                comm.Parameters.Add(new SqlParameter("@usuario", ploginRequest.NombreUsuario));
                 comm.Parameters.Add(new SqlParameter("@password", ploginRequest.Password));
                 SqlDataReader reader = comm.ExecuteReader();
                 if (reader.HasRows)

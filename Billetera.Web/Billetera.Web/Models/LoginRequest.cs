@@ -7,9 +7,9 @@ namespace Billetera.Web.Models
 {
     public class LoginRequest
     {
-        private string username;
+        private string nombreUsuario;
         private string password;
-        public string Username { get=>username; set=>username =value; }
+        public string NombreUsuario { get=> nombreUsuario; set=> nombreUsuario = value; }
         public string Password { get=> password; set=>password=value; }
     }
 }

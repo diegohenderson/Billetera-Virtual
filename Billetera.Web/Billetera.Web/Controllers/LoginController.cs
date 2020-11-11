@@ -41,7 +41,7 @@ namespace Billetera.Web.Controllers
 
             if (isCredentialValid)
             {
-                var token = TokenGenerator.GenerateTokenJwt(login.Username);
+                var token = TokenGenerator.GenerateTokenJwt(login.NombreUsuario);
                 return Ok(token);
             }
             else
