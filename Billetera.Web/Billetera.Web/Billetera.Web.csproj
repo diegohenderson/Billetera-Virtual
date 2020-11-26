@@ -123,6 +123,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Base de Datos\deposito.sql" />
+    <Content Include="Base de Datos\eliminarCliente.sql" />
+    <Content Include="Base de Datos\existeCliente.sql" />
+    <Content Include="Base de Datos\extraccion.sql" />
+    <Content Include="Base de Datos\modificarCliente.sql" />
+    <Content Include="Base de Datos\nuevoCliente.sql" />
+    <Content Include="Base de Datos\obtenerCliente.sql" />
+    <Content Include="Base de Datos\obtenerClientes.sql" />
+    <Content Include="Base de Datos\obtenerLogin.sql" />
     <Content Include="Bundles\favicon.ico" />
     <Content Include="Bundles\index.html" />
     <Content Include="Bundles\main.js" />
@@ -168,6 +177,7 @@
     <Content Include="Bundles\runtime.js.map" />
     <Content Include="Bundles\styles.js.map" />
     <Content Include="Bundles\vendor.js.map" />
+    <Content Include="Base de Datos\clip-money.bak" />
     <None Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Ejemplo\Agregar.cshtml" />
