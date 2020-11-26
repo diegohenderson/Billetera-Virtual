@@ -149,9 +149,16 @@
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Ejemplo.cs" />
     <Compile Include="Models\GestorCliente.cs" />
+    <Compile Include="Models\GestorDniSitCrediticia.cs" />
     <Compile Include="Models\GestorEjemplo.cs" />
     <Compile Include="Models\GestorLogin.cs" />
+    <Compile Include="Models\GestorPPL.cs" />
+    <Compile Include="Models\Localidad.cs" />
     <Compile Include="Models\LoginRequest.cs" />
+    <Compile Include="Models\Pais.cs" />
+    <Compile Include="Models\Provincia.cs" />
+    <Compile Include="Models\SituacionCrediticia.cs" />
+    <Compile Include="Models\TipoDni.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
