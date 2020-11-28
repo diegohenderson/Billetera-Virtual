@@ -16,7 +16,7 @@ namespace Billetera.Web.Controllers
     {
         //[Authorize]
         // GET: api/Cliente
-        public IEnumerable<Cliente> Get()
+      /*  public IEnumerable<Cliente> Get()
         {
             GestorCliente gCliente = new GestorCliente();
             return gCliente.obtenerClientes();
@@ -29,7 +29,7 @@ namespace Billetera.Web.Controllers
             GestorCliente gCliente = new GestorCliente();
             return gCliente.obtenerPorId(id);
         }
-
+      */
         // POST: api/Cliente
        public HttpResponseMessage Post([FromBody] Cliente nuevo)
         {

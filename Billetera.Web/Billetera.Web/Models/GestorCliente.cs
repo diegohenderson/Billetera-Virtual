@@ -11,7 +11,7 @@ using System.Net;
 namespace Billetera.Models
 {
     public class GestorCliente
-    {
+    {/*
         public List<Cliente> obtenerClientes()
         {
             List<Cliente> lista = new List<Cliente>();
@@ -46,7 +46,7 @@ namespace Billetera.Models
                     string nombreUsuario = dr.GetString(14).Trim();
                     string password = dr.GetString(15).Trim();
 
-                    Cliente cli = new Cliente(id, nombre, apellido, sexo, fechaNacimiento, idTipoDni, numDni/*, fotoFrenteDni, fotoDorsoDni*/, idLocalidad, domicilio, telefono, email, idSituacionCrediticia, nombreUsuario, password);
+                    Cliente cli = new Cliente(id, nombre, apellido,  idTipoDni, numDni/*, fotoFrenteDni, fotoDorsoDni,email,  nombreUsuario, password);
 
                     lista.Add(cli);
                 }
@@ -88,13 +88,13 @@ namespace Billetera.Models
                     string nombreUsuario = dr.GetString(14);
                     string password = dr.GetString(15);
 
-                    cli = new Cliente(id, nombre, apellido, sexo, fechaNacimiento, idTipoDni, numDni/*, fotoFrenteDni, fotoDorsoDni*/, idLocalidad, domicilio, telefono, email, idSituacionCrediticia, nombreUsuario, password);
+                    cli = new Cliente(id, nombre, apellido, sexo, fechaNacimiento, idTipoDni, numDni/*, fotoFrenteDni, fotoDorsoDni, idLocalidad, domicilio, telefono, email, idSituacionCrediticia, nombreUsuario, password);
                 }
                 dr.Close();
             }
             return cli;
-        }
-        //
+        }*/
+        
         public HttpResponseMessage nuevoCliente(Cliente nuevo)
         {
             string StrConn = ConfigurationManager.ConnectionStrings["BDLocal"].ToString();
@@ -127,22 +127,22 @@ namespace Billetera.Models
 
                         comm.Parameters.Add(new SqlParameter("@nombre", nuevo.Nombre));
                         comm.Parameters.Add(new SqlParameter("@apellido", nuevo.Apellido));
-                        comm.Parameters.Add(new SqlParameter("@sexo", nuevo.Sexo));
+                        comm.Parameters.Add(new SqlParameter("@sexo", "Indefinido"));
                         comm.Parameters.Add(new SqlParameter("@fecha_nacimiento", nuevo.FechaNacimiento));
 
                         TipoDni idTipoDni = new TipoDni(1);
 
                         comm.Parameters.Add(new SqlParameter("@id_tipo_dni", 1));
 
-                        comm.Parameters.Add(new SqlParameter("@num_dni", nuevo.NumDni));
+                        comm.Parameters.Add(new SqlParameter("@num_dni",nuevo.NumDni));
                         //comm.Parameters.Add(new SqlParameter("@foto_frente_dni", nuevo.FotoFrenteDni));
                         //comm.Parameters.Add(new SqlParameter("@foto_dorso_dni", nuevo.FotoDorsoDni));
 
                         Localidad idLocalidad = new Localidad(1);
                         comm.Parameters.Add(new SqlParameter("@id_localidad", 1));
 
-                        comm.Parameters.Add(new SqlParameter("@domicilio", nuevo.Domicilio));
-                        comm.Parameters.Add(new SqlParameter("@telefono", nuevo.Telefono));
+                        comm.Parameters.Add(new SqlParameter("@domicilio"," Calle falsa 123"));
+                        comm.Parameters.Add(new SqlParameter("@telefono", 12345678));
                         comm.Parameters.Add(new SqlParameter("@email", nuevo.Email));
                         comm.Parameters.Add(new SqlParameter("@nombre_usuario", nuevo.NombreUsuario));
                         comm.Parameters.Add(new SqlParameter("@password", nuevo.Password));
