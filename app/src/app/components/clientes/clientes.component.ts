@@ -27,6 +27,7 @@ export class ClientesComponent implements OnInit {
 
   public onSubmit(cliente: Cliente) {
   
+    console.log("cliente");
       this.clienteService.onCreateCliente(cliente).subscribe(resp => {
         this.clientes.push(resp);
       })
@@ -34,6 +35,7 @@ export class ClientesComponent implements OnInit {
     
 
     this.selectedCliente = new Cliente();
+    console.log(cliente);
   }
   public onSelect(item: Cliente) {
     this.selectedCliente = item;

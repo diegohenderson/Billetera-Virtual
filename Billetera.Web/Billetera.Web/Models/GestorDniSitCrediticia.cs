@@ -30,7 +30,7 @@ namespace Billetera.Web.Models
                     byte id = dr.GetByte(0);
                     string nombre = dr.GetString(1).Trim();
 
-                    TipoDni td = new TipoDni(id, nombre);
+                    TipoDni td = new TipoDni(1);
                     lista.Add(td);
                 }
 

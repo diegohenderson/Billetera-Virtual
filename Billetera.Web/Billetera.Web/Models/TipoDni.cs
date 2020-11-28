@@ -20,11 +20,11 @@ namespace Billetera.Web.Models
         }
 
         //Constructor
-        public TipoDni(byte id, string nombre)
+      /*  public TipoDni(byte id, string nombre)
         {
             this.id = id;
             this.nombre_dni = nombre;
-        }
+        }*/
         public byte id { get; set; }
         public string nombre_dni { get; set; }
         //public virtual ICollection<cliente> cliente { get; set; }
